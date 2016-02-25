@@ -50,17 +50,23 @@ describe('Script Test', function()
     */
    it('test-coverage', function()
    {
+      // Store current TRAVIS environment variable.
+      var origTravis = process.env.TRAVIS;
+      delete process.env.TRAVIS;
+
       fs.emptyDirSync('./coverage');
 
       // Instruments test-coverage script.
       require('../../node_modules/typhonjs-npm-scripts-test-mocha/scripts/test-coverage.js');
 
       // Verify that there are files / directories in `./coverage`.
-
       var files = fs.readdirSync('./coverage');
       assert(files.length > 0);
 
       fs.emptyDirSync('./coverage');
+
+      // Restore Travis environment variable
+      if (typeof origTravis !== 'undefined') { process.env.TRAVIS = origTravis; }
    });
 
    /**
