@@ -1,0 +1,11 @@
+/**
+ * You can provide comments in `npm-pre-publish.json`.
+ *
+ * The entry below is used in pre-publish testing.
+ */
+{
+   "scripts":
+   [
+      "npm run test-scripts"
+   ]
+}

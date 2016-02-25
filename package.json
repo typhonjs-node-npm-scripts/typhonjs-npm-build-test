@@ -1,0 +1,57 @@
+{
+  "name": "typhonjs-npm-build-test",
+  "version": "0.0.1",
+  "homepage": "https://github.com/typhonjs-node-npm/typhonjs-npm-build-test",
+  "description": "Provides a unified set of NPM scripts and dependencies for building and testing ES6+ NPM modules for TyphonJS and beyond.",
+  "license": "MPL-2.0",
+  "author": {
+    "name": "Mike Leahy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typhonjs-node-npm/typhonjs-npm-build-test/typhonjs-npm-build-test.git"
+  },
+  "maintainers": [
+    {
+      "name": "Mike Leahy",
+      "email": "support@js.typhonrt.org"
+    }
+  ],
+  "dependencies": {
+    "typhonjs-npm-scripts-build-babel": "^0.0.1",
+    "typhonjs-npm-scripts-publish": "^0.0.1",
+    "typhonjs-npm-scripts-test-mocha": "^0.0.1"
+  },
+  "devDependencies": {
+  },
+  "keywords": [
+    "typhonjs",
+    "node",
+    "npm",
+    "script",
+    "babel",
+    "build",
+    "es6",
+    "prepublish",
+    "publish",
+    "test",
+    "chai",
+    "codecov",
+    "istanbul",
+    "mocha"
+  ],
+  "engines" : {
+    "npm" : ">=3.x"
+  },
+  "scripts": {
+    "prepublish": "babel-node ./node_modules/typhonjs-npm-scripts-publish/scripts/prepublish.js",
+    "test-scripts": "babel-node ./test-scripts/scripts/testAll.js"
+  },
+  "files": [
+    "CHANGELOG.md"
+  ],
+  "directories": {},
+  "bugs": {
+    "url": "https://github.com/typhonjs-node-npm/typhonjs-npm-build-test/issues"
+  }
+}
