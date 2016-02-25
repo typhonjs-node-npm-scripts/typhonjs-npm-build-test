@@ -1,0 +1,26 @@
+/**
+ * You can provide comments in npm-test-mocha.json
+ *
+ * If `typhonjs-npm-scripts-build-babel` is installed and configured uncomment `--compilers js:babel-register` in
+ * the options below. Also if your test scripts are ES6 then use `babel-node` instead of `node` to launch the testing
+ * NPM scripts.
+ */
+{
+   "codecov": "&& cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js",
+
+   "istanbul":
+   {
+      "command": "cover",
+      "options": ["--report lcovonly"]
+   },
+
+   "mocha":
+   {
+      "source": "./test-src/mocha",
+      "options":
+      [
+         "--compilers js:babel-register",
+         "-t 120000 --recursive"
+      ]
+   }
+}

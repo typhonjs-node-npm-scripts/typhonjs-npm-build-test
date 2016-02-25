@@ -1,6 +1,6 @@
 {
   "name": "typhonjs-npm-build-test",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "homepage": "https://github.com/typhonjs-node-npm/typhonjs-npm-build-test",
   "description": "Provides a unified set of NPM scripts and dependencies for building and testing ES6+ NPM modules for TyphonJS and beyond.",
   "license": "MPL-2.0",
@@ -18,9 +18,9 @@
     }
   ],
   "dependencies": {
-    "typhonjs-npm-scripts-build-babel": "^0.0.1",
-    "typhonjs-npm-scripts-publish": "^0.0.1",
-    "typhonjs-npm-scripts-test-mocha": "^0.0.1"
+    "typhonjs-npm-scripts-build-babel": "^0.0.3",
+    "typhonjs-npm-scripts-publish": "^0.0.3",
+    "typhonjs-npm-scripts-test-mocha": "^0.0.3"
   },
   "devDependencies": {
   },

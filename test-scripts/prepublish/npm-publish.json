@@ -4,8 +4,5 @@
  * The entry below is used in testing and is invoked in `./test/scripts/test.js` via `npm run test`.
  */
 {
-   "scripts":
-   [
-      "node fixture.js"
-   ]
+   "prepublish": { "scripts": ["node fixture.js"] }
 }

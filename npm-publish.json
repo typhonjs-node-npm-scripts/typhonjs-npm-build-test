@@ -4,8 +4,8 @@
  * The entry below is used in pre-publish testing.
  */
 {
-   "scripts":
-   [
-      "npm run test-scripts"
-   ]
+   "prepublish":
+   {
+      "scripts": ["npm run test-scripts"]
+   }
 }
