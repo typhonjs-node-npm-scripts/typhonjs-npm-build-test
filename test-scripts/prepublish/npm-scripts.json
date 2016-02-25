@@ -1,0 +1,9 @@
+/**
+ * You can provide comments in `npm-scripts.json`.
+ */
+{
+   "publish":
+   {
+      "prepublish": { "scripts": ["node fixture.js"] }
+   }
+}
