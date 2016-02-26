@@ -1,8 +1,9 @@
 /**
  * You can provide comments in `npm-scripts.json`
  *
- * If working with ES6 sources or testing sources make sure `--compilers js:babel-register` is enabled in `test.mocha.options` below 
- * and use `babel-node` to invoke any scripts in `package.json`. This includes any test scripts which may also be written in ES6.
+ * If working with ES6 sources or testing sources make sure `--compilers js:babel-register` is enabled in
+ * `test.mocha.options` below and use `babel-node` to invoke any scripts in `package.json`. This includes any test
+ * scripts which may also be written in ES6.
  */
 {
    "build":
