@@ -1,9 +1,12 @@
 'use strict';
 
 /**
- * testAll -- Initiates the testing process with Istanbul and Mocha invoking an all inclusive test
+ * testAll -- Initiates a special testing process with Istanbul and Mocha invoking an all inclusive test
  * `./test-scripts/mocha/TestScriptsRunner.js` which runs all TyphonJS NPM scripts directly so that they are
- * instrumented by Istanbul.
+ * instrumented by Istanbul. It should be noted that this is a special testing setup as `npm-scripts.json` test section
+ * contains data pertaining to the test itself. Normally one would add a script entry in `package.json` like the
+ * following: `"test-coverage": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/test-coverage.js"`
+ * and add the corresponding test setup data to `npm-scripts.json`.
  */
 
 var cp = require('child_process');
