@@ -80,7 +80,7 @@ describe('Script Test', function()
    {
       var cwd = process.cwd();
 
-      // Changes working directory to the prepublish test directory which is where npm-pre-publish.json is picked up.
+      // Changes working directory to the prepublish test directory where a local test npm-scripts.json is picked up.
       process.chdir(cwd + '/test-scripts/prepublish');
 
       // Require prepublishTest which subsequently requires:
