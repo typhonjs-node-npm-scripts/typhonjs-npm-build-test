@@ -1,8 +1,8 @@
 {
   "name": "typhonjs-npm-build-test",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "homepage": "https://github.com/typhonjs-node-npm/typhonjs-npm-build-test",
-  "description": "Provides a unified set of NPM scripts and dependencies for building and testing ES6+ NPM modules for TyphonJS and beyond.",
+  "description": "Provides a unified set of NPM scripts and dependencies for building and testing ES6 NPM modules for TyphonJS and beyond.",
   "license": "MPL-2.0",
   "author": {
     "name": "Mike Leahy"
@@ -18,9 +18,9 @@
     }
   ],
   "dependencies": {
-    "typhonjs-npm-scripts-build-babel": "^0.0.4",
-    "typhonjs-npm-scripts-publish": "^0.0.4",
-    "typhonjs-npm-scripts-test-mocha": "^0.0.4"
+    "typhonjs-npm-scripts-build-babel": "^0.0.x",
+    "typhonjs-npm-scripts-publish": "^0.0.x",
+    "typhonjs-npm-scripts-test-mocha": "^0.0.x"
   },
   "devDependencies": {
   },
