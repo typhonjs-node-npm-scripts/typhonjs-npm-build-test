@@ -9,10 +9,50 @@
 [![Build Status](https://img.shields.io/codecov/c/github/typhonjs-node-npm/typhonjs-npm-build-test.svg)](https://codecov.io/github/typhonjs-node-npm/typhonjs-npm-build-test)
 [![Dependency Status](https://www.versioneye.com/user/projects/56cea42b6b21e5003abcd590/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56cea42b6b21e5003abcd590)
 
-Provides a unified environment combining the following set of NPM modules / scripts and dependencies for building and testing ES6+ NPM modules for TyphonJS and beyond:
+Provides a unified environment combining the following set of NPM modules / scripts and dependencies for building and testing ES6 NPM modules for TyphonJS and beyond:
 
 - [typhonjs-npm-scripts-build-babel](https://www.npmjs.com/package/typhonjs-npm-scripts-build-babel)
 - [typhonjs-npm-scripts-publish](https://www.npmjs.com/package/typhonjs-npm-scripts-publish)
 - [typhonjs-npm-scripts-test-mocha](https://www.npmjs.com/package/typhonjs-npm-scripts-test-mocha)
 
+Please refer to the above NPM modules for documentation regarding expanded configuration details specific to each script. All TyphonJS NPM script modules use `npm-scripts.json` found in the root path to store configuration parameters. It should be noted that this NPM module requires NPM 3.0+ as flat packages for the `./node_modules` directory is necessary to easily import the NPM modules linked by `typhonjs-npm-build-test`.
 
+------
+
+To configure all scripts included in `typhonjs-npm-build-test` provide this entry in `package.json` scripts entry:
+
+```
+  "devDependencies": {
+    "typhonjs-npm-build-test": "^0.0.x"
+  },
+  "scripts": {
+    "build": "babel-node ./node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js",
+    "prepublish": "babel-node ./node_modules/typhonjs-npm-scripts-publish/scripts/prepublish.js",
+    "test": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/test.js",
+    "test-coverage": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/test-coverage.js"
+  },
+```
+
+The following is the standard `npm-scripts.json` file that all TyphonJS NPM modules use:
+```
+{
+   "build":
+   {
+      "babel": { "source": "src", "destination": "dist" }
+   },
+
+   "publish":
+   {
+      "prepublish": { "scripts": [ "npm run test", "npm run build" ] }
+   },
+
+   "test":
+   {
+      "codecov": "&& cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js",
+      "istanbul": { "command": "cover", "options": [ "--report lcovonly" ] },
+      "mocha": { "source": "./test/src", "options": [ "--compilers js:babel-register", "-t 120000 --recursive" ] }
+   }
+}
+```
+
+Please note that you can add comments to `npm-scripts.json`.
