@@ -48,7 +48,9 @@ The following is the standard `npm-scripts.json` file that all TyphonJS NPM modu
 
    "test":
    {
-      "codecov": "&& cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js",
+      // Provides a `coverage` handling command that is appended when running on Travis CI.
+      "travis": { "coverage": "&& cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js" },
+
       "istanbul": { "command": "cover", "options": [ "--report lcovonly" ] },
       "mocha": { "source": "./test/src", "options": [ "--compilers js:babel-register", "-t 120000 --recursive" ] }
    }
