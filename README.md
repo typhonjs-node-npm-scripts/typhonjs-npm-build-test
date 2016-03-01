@@ -6,7 +6,7 @@
 [![Gitter](https://img.shields.io/gitter/room/typhonjs/TyphonJS.svg)](https://gitter.im/typhonjs/TyphonJS)
 
 [![Build Status](https://travis-ci.org/typhonjs-node-npm/typhonjs-npm-build-test.svg?branch=master)](https://travis-ci.org/typhonjs-node-npm/typhonjs-npm-build-test)
-[![Build Status](https://img.shields.io/codecov/c/github/typhonjs-node-npm/typhonjs-npm-build-test.svg)](https://codecov.io/github/typhonjs-node-npm/typhonjs-npm-build-test)
+[![Coverage](https://img.shields.io/codecov/c/github/typhonjs-node-npm/typhonjs-npm-build-test.svg)](https://codecov.io/github/typhonjs-node-npm/typhonjs-npm-build-test)
 [![Dependency Status](https://www.versioneye.com/user/projects/56cea42b6b21e5003abcd590/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56cea42b6b21e5003abcd590)
 
 Provides a unified environment combining the following set of NPM modules / scripts and dependencies for building and testing ES6 NPM modules for TyphonJS and beyond:
