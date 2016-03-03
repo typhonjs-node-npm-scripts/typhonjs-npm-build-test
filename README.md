@@ -15,7 +15,7 @@ Provides a unified environment combining the following set of NPM modules / scri
 - [typhonjs-npm-scripts-publish](https://www.npmjs.com/package/typhonjs-npm-scripts-publish)
 - [typhonjs-npm-scripts-test-mocha](https://www.npmjs.com/package/typhonjs-npm-scripts-test-mocha)
 
-Please refer to the above NPM modules for documentation regarding expanded configuration details specific to each script. All TyphonJS NPM script modules use `npm-scripts.json` found in the root path to store configuration parameters. It should be noted that this NPM module requires NPM 3.0+ as flat packages for the `./node_modules` directory is necessary to easily import the NPM modules linked by `typhonjs-npm-build-test`.
+Please refer to the above NPM modules for documentation regarding expanded configuration details specific to each script. All TyphonJS NPM script modules use `.npmscriptrc` found in the root path to store JSON formatted configuration parameters. It should be noted that this NPM module requires NPM 3.0+ as flat packages for the `./node_modules` directory is necessary to easily import the NPM modules linked by `typhonjs-npm-build-test`.
 
 ------
 
@@ -33,7 +33,7 @@ To configure all scripts included in `typhonjs-npm-build-test` provide this entr
   },
 ```
 
-The following is the standard `npm-scripts.json` file that all TyphonJS NPM modules use:
+The following is a standard `.npmscriptrc` file that all TyphonJS NPM modules use:
 ```
 {
    "build":
@@ -57,4 +57,4 @@ The following is the standard `npm-scripts.json` file that all TyphonJS NPM modu
 }
 ```
 
-Please note that you can add comments to `npm-scripts.json`.
+Please note that you can add comments to `.npmscriptrc`.
