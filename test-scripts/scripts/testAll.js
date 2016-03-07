@@ -16,9 +16,9 @@ var fs = require('fs-extra');
 var mochaOptions = '-t 120000 --recursive ./test-scripts/mocha/TestScriptsRunner.js';
 
 // Includes only the TyphonJS node_modules NPM scripts. Outputs to `coverage-test`.
-var istanbulOptions = "--no-default-excludes -i '[ **/node_modules/typhonjs-npm-scripts-build-babel/** " +
- "**/node_modules/typhonjs-npm-scripts-publish/** **/node_modules/typhonjs-npm-scripts-test-mocha/** ]' " +
-  "--dir coverage-test";
+var istanbulOptions = "--no-default-excludes -i '[ **/node_modules/typhonjs-npm-scripts-build-babel/scripts/** " +
+ "**/node_modules/typhonjs-npm-scripts-publish/scripts/** " +
+  "**/node_modules/typhonjs-npm-scripts-test-mocha/scripts/** ]' --dir coverage-test";
 
 var exec;
 
