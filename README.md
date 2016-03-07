@@ -1,4 +1,4 @@
-![typhonjs-npm-build-test](http://i.imgur.com/6ATIGys.png)
+![typhonjs-npm-build-test](http://i.imgur.com/mW07KMu.png)
 
 [![NPM](https://img.shields.io/npm/v/typhonjs-npm-build-test.svg?label=npm)](https://www.npmjs.com/package/typhonjs-npm-build-test)
 [![Code Style](https://img.shields.io/badge/code%20style-allman-yellowgreen.svg?style=flat)](https://en.wikipedia.org/wiki/Indent_style#Allman_style)
@@ -9,8 +9,9 @@
 [![Coverage](https://img.shields.io/codecov/c/github/typhonjs-node-npm/typhonjs-npm-build-test.svg)](https://codecov.io/github/typhonjs-node-npm/typhonjs-npm-build-test)
 [![Dependency Status](https://www.versioneye.com/user/projects/56cea42b6b21e5003abcd590/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56cea42b6b21e5003abcd590)
 
-Provides a unified environment combining the following set of NPM modules / scripts and dependencies for building and testing ES6 NPM modules for TyphonJS and beyond:
+Provides a unified environment combining the following set of NPM modules / scripts and dependencies for building, documenting, and testing ES6 NPM modules for TyphonJS and beyond:
 
+- [typhonjs-node-esdoc](https://www.npmjs.com/package/typhonjs-node-esdoc)
 - [typhonjs-npm-scripts-build-babel](https://www.npmjs.com/package/typhonjs-npm-scripts-build-babel)
 - [typhonjs-npm-scripts-publish](https://www.npmjs.com/package/typhonjs-npm-scripts-publish)
 - [typhonjs-npm-scripts-test-mocha](https://www.npmjs.com/package/typhonjs-npm-scripts-test-mocha)
@@ -23,10 +24,12 @@ To configure all scripts included in `typhonjs-npm-build-test` provide this entr
 
 ```
   "devDependencies": {
-    "typhonjs-npm-build-test": "^0.0.8"
+    "typhonjs-npm-build-test": "^0.0.10"
   },
   "scripts": {
     "build": "babel-node ./node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js",
+    "esdoc": "esdoc .",
+    "eslint": "eslint .",
     "prepublish": "babel-node ./node_modules/typhonjs-npm-scripts-publish/scripts/prepublish.js",
     "test": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/test.js",
     "test-coverage": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/test-coverage.js"
@@ -43,7 +46,7 @@ The following is a standard `.npmscriptrc` file that all TyphonJS NPM modules us
 
    "publish":
    {
-      "prepublish": { "scripts": [ "npm run test", "npm run build" ] }
+      "prepublish": { "scripts": [ "npm run eslint", npm run test", "npm run build" ] }
    },
 
    "test":
