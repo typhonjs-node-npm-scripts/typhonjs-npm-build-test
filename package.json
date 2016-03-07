@@ -19,8 +19,8 @@
   ],
   "dependencies": {
     "typhonjs-node-esdoc": "^0.0.1",
-    "typhonjs-npm-scripts-build-babel": "^0.0.8",
-    "typhonjs-npm-scripts-publish": "^0.0.8",
+    "typhonjs-npm-scripts-build-babel": "^0.0.9",
+    "typhonjs-npm-scripts-publish": "^0.0.9",
     "typhonjs-npm-scripts-test-mocha": "^0.0.10"
   },
   "devDependencies": {
