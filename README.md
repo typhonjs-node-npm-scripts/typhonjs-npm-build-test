@@ -28,7 +28,7 @@ To configure all scripts included in `typhonjs-npm-build-test` provide this entr
   },
   "scripts": {
     "build": "babel-node ./node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js",
-    "esdoc": "esdoc .",
+    "esdoc": "esdoc -c esdoc.json",
     "eslint": "eslint .",
     "prepublish": "babel-node ./node_modules/typhonjs-npm-scripts-publish/scripts/prepublish.js",
     "test": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/test.js",
@@ -46,15 +46,19 @@ The following is a standard `.npmscriptrc` file that all TyphonJS NPM modules us
 
    "publish":
    {
-      "prepublish": { "scripts": [ "npm run eslint", npm run test", "npm run build" ] }
+      "prepublish": { "scripts": [ "npm run eslint", "npm run test", "npm run build" ] }
    },
 
    "test":
    {
-      // Provides a `coverage` handling command that is appended when running on Travis CI.
-      "travis": { "coverage": "&& cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js" },
+      // Provides a `coverage` handling command that is appended when running on Travis CI and lcov only output from Istanbul.
+      "travis": 
+      { 
+         "coverage": "&& cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js",
+         "istanbul": { "command": "cover", "options": [ "--report lcovonly" ] }
+      },
 
-      "istanbul": { "command": "cover", "options": [ "--report lcovonly" ] },
+      "istanbul": { "command": "cover" },
       "mocha": { "source": "./test/src", "options": [ "--compilers js:babel-register", "-t 120000 --recursive" ] }
    }
 }
