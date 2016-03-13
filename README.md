@@ -25,7 +25,7 @@ To configure all scripts included in `typhonjs-npm-build-test` provide this entr
 
 ```
   "devDependencies": {
-    "typhonjs-npm-build-test": "^0.0.11"
+    "typhonjs-npm-build-test": "^0.0.12"
   },
   "scripts": {
     "build": "babel-node ./node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js",
