@@ -2,11 +2,11 @@
 
 [![NPM](https://img.shields.io/npm/v/typhonjs-npm-build-test.svg?label=npm)](https://www.npmjs.com/package/typhonjs-npm-build-test)
 [![Code Style](https://img.shields.io/badge/code%20style-allman-yellowgreen.svg?style=flat)](https://en.wikipedia.org/wiki/Indent_style#Allman_style)
-[![License](https://img.shields.io/badge/license-MPLv2-yellowgreen.svg?style=flat)](https://github.com/typhonjs-node-npm/typhonjs-npm-build-test/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-MPLv2-yellowgreen.svg?style=flat)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-build-test/blob/master/LICENSE)
 [![Gitter](https://img.shields.io/gitter/room/typhonjs/TyphonJS.svg)](https://gitter.im/typhonjs/TyphonJS)
 
-[![Build Status](https://travis-ci.org/typhonjs-node-npm/typhonjs-npm-build-test.svg?branch=master)](https://travis-ci.org/typhonjs-node-npm/typhonjs-npm-build-test)
-[![Coverage](https://img.shields.io/codecov/c/github/typhonjs-node-npm/typhonjs-npm-build-test.svg)](https://codecov.io/github/typhonjs-node-npm/typhonjs-npm-build-test)
+[![Build Status](https://travis-ci.org/typhonjs-node-npm-scripts/typhonjs-npm-build-test.svg?branch=master)](https://travis-ci.org/typhonjs-node-npm-scripts/typhonjs-npm-build-test)
+[![Coverage](https://img.shields.io/codecov/c/github/typhonjs-node-npm-scripts/typhonjs-npm-build-test.svg)](https://codecov.io/github/typhonjs-node-npm-scripts/typhonjs-npm-build-test)
 [![Dependency Status](https://www.versioneye.com/user/projects/56cea42b6b21e5003abcd590/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56cea42b6b21e5003abcd590)
 
 Provides a unified environment combining the following set of NPM modules / scripts and dependencies for building, documenting, and testing ES6 NPM modules for TyphonJS and beyond:
@@ -24,15 +24,15 @@ To configure all scripts included in `typhonjs-npm-build-test` provide this entr
 
 ```
   "devDependencies": {
-    "typhonjs-npm-build-test": "^0.0.10"
+    "typhonjs-npm-build-test": "^0.0.11"
   },
   "scripts": {
     "build": "babel-node ./node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js",
     "esdoc": "esdoc -c esdoc.json",
     "eslint": "eslint .",
     "prepublish": "babel-node ./node_modules/typhonjs-npm-scripts-publish/scripts/prepublish.js",
-    "test": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/test.js",
-    "test-coverage": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/test-coverage.js"
+    "test": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha.js",
+    "test-coverage": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha-istanbul.js"
   },
 ```
 
@@ -51,10 +51,10 @@ The following is a standard `.npmscriptrc` file that all TyphonJS NPM modules us
 
    "test":
    {
-      // Provides a `coverage` handling command that is appended when running on Travis CI and lcov only output from Istanbul.
+      // Provides a report handling command that is executed after running tests / coverage when running on Travis CI.
       "travis": 
       { 
-         "coverage": "&& cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js",
+         "report": "cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js",
          "istanbul": { "command": "cover", "options": [ "--report lcovonly" ] }
       },
 
