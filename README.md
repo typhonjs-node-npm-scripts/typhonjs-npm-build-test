@@ -9,8 +9,9 @@
 [![Coverage](https://img.shields.io/codecov/c/github/typhonjs-node-npm-scripts/typhonjs-npm-build-test.svg)](https://codecov.io/github/typhonjs-node-npm-scripts/typhonjs-npm-build-test)
 [![Dependency Status](https://www.versioneye.com/user/projects/56e5a03ddf573d00495abd11/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56e5a03ddf573d00495abd11)
 
-Provides a unified environment combining the following set of NPM modules / scripts and dependencies for building, documenting, and testing ES6 NPM modules for TyphonJS and beyond:
+Provides a unified environment combining the following set of NPM modules / scripts and dependencies for building, documenting, and testing ES6 NPM modules including a instrumentation of JSPM / SystemJS tests for TyphonJS and beyond:
 
+- [typhonjs-istanbul-instrument-jspm](https://www.npmjs.com/package/typhonjs-istanbul-instrument-jspm)
 - [typhonjs-node-esdoc](https://www.npmjs.com/package/typhonjs-node-esdoc)
 - [typhonjs-npm-scripts-build-babel](https://www.npmjs.com/package/typhonjs-npm-scripts-build-babel)
 - [typhonjs-npm-scripts-publish](https://www.npmjs.com/package/typhonjs-npm-scripts-publish)
