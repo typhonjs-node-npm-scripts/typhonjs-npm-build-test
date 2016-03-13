@@ -38,17 +38,17 @@ describe('Script Test', function()
    });
 
    /**
-    * Test `../../node_modules/typhonjs-npm-scripts-test-mocha/scripts/test.js`.
+    * Test `../../node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha.js`.
     */
-   it('test', function()
+   it('mocha', function()
    {
-      require('../../node_modules/typhonjs-npm-scripts-test-mocha/scripts/test.js');
+      require('../../node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha.js');
    });
 
    /**
-    * Test `../../node_modules/typhonjs-npm-scripts-test-mocha/scripts/test-coverage.js`.
+    * Test `../../node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha-istanbul.js`.
     */
-   it('test-coverage', function()
+   it('mocha-istanbul', function()
    {
       // Store current TRAVIS environment variable.
       var origTravis = process.env.TRAVIS;
@@ -57,7 +57,31 @@ describe('Script Test', function()
       fs.emptyDirSync('./coverage');
 
       // Instruments test-coverage script.
-      require('../../node_modules/typhonjs-npm-scripts-test-mocha/scripts/test-coverage.js');
+      require('../../node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha-istanbul.js');
+
+      // Verify that there are files / directories in `./coverage`.
+      var files = fs.readdirSync('./coverage');
+      assert(files.length > 0);
+
+      fs.emptyDirSync('./coverage');
+
+      // Restore Travis environment variable
+      if (typeof origTravis !== 'undefined') { process.env.TRAVIS = origTravis; }
+   });
+
+   /**
+    * Test `../../node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha-istanbul-report.js`.
+    */
+   it('mocha-istanbul-report', function()
+   {
+      // Store current TRAVIS environment variable.
+      var origTravis = process.env.TRAVIS;
+      delete process.env.TRAVIS;
+
+      fs.emptyDirSync('./coverage');
+
+      // Instruments test-coverage script.
+      require('../../node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha-istanbul-report.js');
 
       // Verify that there are files / directories in `./coverage`.
       var files = fs.readdirSync('./coverage');
