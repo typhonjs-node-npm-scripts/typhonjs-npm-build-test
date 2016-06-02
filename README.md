@@ -1,4 +1,4 @@
-![typhonjs-npm-build-test](https://i.imgur.com/mW07KMu.png)
+![typhonjs-npm-build-test](https://i.imgur.com/9hJT6cf.png)
 
 [![NPM](https://img.shields.io/npm/v/typhonjs-npm-build-test.svg?label=npm)](https://www.npmjs.com/package/typhonjs-npm-build-test)
 [![Code Style](https://img.shields.io/badge/code%20style-allman-yellowgreen.svg?style=flat)](https://en.wikipedia.org/wiki/Indent_style#Allman_style)
