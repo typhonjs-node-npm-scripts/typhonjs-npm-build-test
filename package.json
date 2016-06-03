@@ -1,6 +1,6 @@
 {
   "name": "typhonjs-npm-build-test",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-build-test",
   "description": "Provides a unified set of NPM scripts and dependencies for building and testing ES6 NPM modules for TyphonJS and beyond.",
   "license": "MPL-2.0",
@@ -14,15 +14,15 @@
   "maintainers": [
     {
       "name": "Mike Leahy",
-      "email": "support@js.typhonrt.org"
+      "email": "support@typhonjs.io"
     }
   ],
   "dependencies": {
     "typhonjs-istanbul-instrument-jspm": "^0.1.0",
-    "typhonjs-node-esdoc": "^0.1.0",
-    "typhonjs-npm-scripts-build-babel": "^0.1.0",
+    "typhonjs-node-esdoc": "^0.2.0",
+    "typhonjs-npm-scripts-build-babel": "^0.2.0",
     "typhonjs-npm-scripts-publish": "^0.1.0",
-    "typhonjs-npm-scripts-test-mocha": "^0.1.0"
+    "typhonjs-npm-scripts-test-mocha": "^0.2.0"
   },
   "devDependencies": {
     "typhonjs-config-eslint": "^0.4.0"
