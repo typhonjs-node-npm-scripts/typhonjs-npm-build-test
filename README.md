@@ -18,6 +18,7 @@ Provides a unified environment combining the following set of NPM modules / scri
 - [typhonjs-npm-scripts-build-babel](https://www.npmjs.com/package/typhonjs-npm-scripts-build-babel)
 - [typhonjs-npm-scripts-publish](https://www.npmjs.com/package/typhonjs-npm-scripts-publish)
 - [typhonjs-npm-scripts-test-mocha](https://www.npmjs.com/package/typhonjs-npm-scripts-test-mocha)
+- [typhonjs-npm-scripts-runner](https://www.npmjs.com/package/typhonjs-npm-scripts-runner)
 
 Please refer to the above NPM modules for documentation regarding expanded configuration details specific to each script. All TyphonJS NPM script modules use `.npmscriptrc` found in the root path to store JSON formatted configuration parameters. It should be noted that this NPM module requires NPM 3.0+ as flat packages for the `./node_modules` directory is necessary to easily import the NPM modules linked by `typhonjs-npm-build-test`.
 
@@ -31,7 +32,7 @@ To configure all scripts included in `typhonjs-npm-build-test` provide this entr
 
 ```
   "devDependencies": {
-    "typhonjs-npm-build-test": "^0.2.0"
+    "typhonjs-npm-build-test": "^0.3.0"
   },
   "scripts": {
     "build": "babel-node ./node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js",
