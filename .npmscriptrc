@@ -16,6 +16,11 @@
       "prepublish": { "scripts": ["npm run eslint", "npm run test-scripts"] }
    },
 
+   "runner":
+   {
+      "scripts": ["cp ./test-src/data/test.json ./test-src/dist/test.json"]
+   },
+
    "test":
    {
       // Provides a report handling command that is executed after running tests / coverage when running on Travis CI.

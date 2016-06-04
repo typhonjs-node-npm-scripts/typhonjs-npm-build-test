@@ -10,7 +10,9 @@ fs.emptyDirSync('./coverage-test');
  * `../../node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js`
  * `../../node_modules/typhonjs-npm-scripts-test-mocha/scripts/test.js`
  * `../../node_modules/typhonjs-npm-scripts-test-mocha/scripts/test-coverage.js`
- * `../../node_modules/typhonjs-npm-scripts-publish/scripts/prepublish.js`
+ *
+ * Runs the following module:
+ * `typhonjs-npm-scripts-runner`
  *
  * @test {onHandleCode}
  */
@@ -19,7 +21,7 @@ describe('Script Test', function()
    /**
     * Test `../../node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js`.
     */
-   it('build', function()
+   it('babel build', function()
    {
       fs.emptyDirSync('./test-src/dist');
 
@@ -112,5 +114,21 @@ describe('Script Test', function()
       require('../prepublish/prepublishTest.js');
 
       process.chdir(cwd);
+   });
+
+   /**
+    * Test `typhonjs-npm-scripts-runner`.
+    */
+   it('runner', function()
+   {
+      fs.emptyDirSync('./test-src/dist');
+
+      var runner = require('typhonjs-npm-scripts-runner');
+
+      runner.run('./.npmscriptrc', 'runner.scripts');
+
+      assert(fs.statSync('./test-src/dist/test.json').isFile());
+
+      fs.emptyDirSync('./test-src/dist');
    });
 });
