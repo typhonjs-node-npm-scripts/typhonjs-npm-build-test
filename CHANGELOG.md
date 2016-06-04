@@ -1,3 +1,9 @@
+## 0.3.0 (2016-06-04)
+- Added [typhonjs-npm-scripts-runner](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-runner)
+- Updated the following sub-modules (click to see respective CHANGELOG): 
+  - [typhonjs-npm-scripts-build-babel(0.3.0)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-build-babel/blob/master/CHANGELOG.md#030-2016-06-03)
+  - [typhonjs-npm-scripts-publish(0.2.0)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-publish/blob/master/CHANGELOG.md#020-2016-06-02)
+
 ## 0.2.0 (2016-06-02)
 - Updated the following sub-modules: 
   - typhonjs-node-esdoc(0.2.0) 
