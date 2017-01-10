@@ -1,3 +1,10 @@
+## 0.4.0 (2016-06-04)
+- Updated the following sub-modules (click to see respective CHANGELOG): 
+  - [typhonjs-npm-scripts-build-babel(0.4.0)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-build-babel/releases/tag/0.4.0)
+  - [typhonjs-npm-scripts-test-mocha(0.3.0)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-test-mocha/releases/tag/0.3.0)
+  - [typhonjs-npm-scripts-runner(0.2.0)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-runner/releases/tag/0.2.0)
+- Please note that in the next release ESDoc / typhonjs-node-esdoc will be removed for a new documentation system.
+
 ## 0.3.0 (2016-06-04)
 - Added [typhonjs-npm-scripts-runner](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-runner)
 - Updated the following sub-modules (click to see respective CHANGELOG): 
