@@ -14,7 +14,6 @@ Requirements: Node v5+ / NPM 3+
 Provides a unified environment combining the following set of NPM modules / scripts and dependencies for building, documenting, and testing ES6 NPM modules including instrumentation of JSPM / SystemJS tests for TyphonJS and beyond:
 
 - [typhonjs-istanbul-instrument-jspm](https://www.npmjs.com/package/typhonjs-istanbul-instrument-jspm)
-- [typhonjs-node-esdoc](https://www.npmjs.com/package/typhonjs-node-esdoc)
 - [typhonjs-npm-scripts-build-babel](https://www.npmjs.com/package/typhonjs-npm-scripts-build-babel)
 - [typhonjs-npm-scripts-publish](https://www.npmjs.com/package/typhonjs-npm-scripts-publish)
 - [typhonjs-npm-scripts-test-mocha](https://www.npmjs.com/package/typhonjs-npm-scripts-test-mocha)
@@ -24,6 +23,8 @@ Please refer to the above NPM modules for documentation regarding expanded confi
 
 For the latest significant changes please see the [CHANGELOG](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-build-test/blob/master/CHANGELOG.md).
 
+Please be aware of a 0.5.0 breaking change as [typhonjs-node-esdoc](https://www.npmjs.com/package/typhonjs-node-esdoc) has been removed, so ESDoc is no longer available. It is going to be replaced in the next release, `0.6.0`, with TJSDoc (the spiritual successor to ESDoc). 
+
 Please be aware of a 0.2.0 breaking change in [typhonjs-npm-scripts-test-mocha](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-test-mocha/blob/master/CHANGELOG.md#020-2016-06-02)
 
 ------
@@ -32,7 +33,7 @@ To configure all scripts included in `typhonjs-npm-build-test` provide this entr
 
 ```
   "devDependencies": {
-    "typhonjs-npm-build-test": "^0.3.0"
+    "typhonjs-npm-build-test": "^0.5.0"
   },
   "scripts": {
     "build": "babel-node ./node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js",
