@@ -1,6 +1,6 @@
 {
   "name": "typhonjs-npm-build-test",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "homepage": "https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-build-test",
   "description": "Provides a unified set of NPM scripts and dependencies for building and testing ES6+ NPM modules for TyphonJS and beyond.",
   "license": "MPL-2.0",
@@ -19,10 +19,10 @@
   ],
   "dependencies": {
     "typhonjs-istanbul-instrument-jspm": "^0.1.0",
-    "typhonjs-npm-scripts-build-babel": "^0.5.0",
-    "typhonjs-npm-scripts-publish": "^0.3.0",
-    "typhonjs-npm-scripts-test-mocha": "^0.4.0",
-    "typhonjs-npm-scripts-runner": "^0.3.0"
+    "typhonjs-npm-scripts-build-babel": "^0.6.0",
+    "typhonjs-npm-scripts-publish": "^0.4.0",
+    "typhonjs-npm-scripts-test-mocha": "^0.5.0",
+    "typhonjs-npm-scripts-runner": "^0.4.0"
   },
   "devDependencies": {
     "typhonjs-config-eslint": "^0.5.0"
@@ -49,8 +49,7 @@
   "scripts": {
     "build": "babel-node ./node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js",
     "eslint": "eslint .",
-    "prepublish": "babel-node ./node_modules/typhonjs-npm-scripts-publish/scripts/prepublish.js",
-    "test-scripts": "babel-node ./test-scripts/scripts/testAll.js"
+    "prepublish": "babel-node ./node_modules/typhonjs-npm-scripts-publish/scripts/prepublish.js"
   },
   "files": [
     "AUTHORS.md"
