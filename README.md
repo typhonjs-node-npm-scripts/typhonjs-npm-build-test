@@ -5,7 +5,6 @@
 [![License](https://img.shields.io/badge/license-MPLv2-yellowgreen.svg?style=flat)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-build-test/blob/master/LICENSE)
 [![Gitter](https://img.shields.io/gitter/room/typhonjs/TyphonJS.svg)](https://gitter.im/typhonjs/TyphonJS)
 
-[![Build Status](https://travis-ci.org/typhonjs-node-npm-scripts/typhonjs-npm-build-test.svg?branch=master)](https://travis-ci.org/typhonjs-node-npm-scripts/typhonjs-npm-build-test)
 [![Dependency Status](https://www.versioneye.com/user/projects/56e5a03ddf573d00495abd11/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56e5a03ddf573d00495abd11)
 
 Requirements: Node v5+ / NPM 3+
