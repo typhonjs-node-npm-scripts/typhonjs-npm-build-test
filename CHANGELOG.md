@@ -1,3 +1,10 @@
+## 0.6.0 (2017-02-25)
+- Updated the following sub-modules (click to see respective CHANGELOG): 
+  - [typhonjs-npm-scripts-build-babel(0.6.0)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-build-babel/releases/tag/0.5.0)
+  - [typhonjs-npm-scripts-publish(0.4.0)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-publish/releases/tag/0.3.0)
+  - [typhonjs-npm-scripts-test-mocha(0.5.0)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-test-mocha/releases/tag/0.4.0)
+  - [typhonjs-npm-scripts-runner(0.4.0)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-runner/releases/tag/0.3.0)
+
 ## 0.5.0 (2017-02-18)
 - Updated the following sub-modules (click to see respective CHANGELOG): 
   - [typhonjs-npm-scripts-build-babel(0.5.0)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-build-babel/releases/tag/0.5.0)
