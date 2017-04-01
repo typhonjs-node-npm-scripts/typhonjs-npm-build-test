@@ -1,3 +1,7 @@
+## 0.7.0 (2017-04-01)
+- Updated the following sub-modules (click to see respective CHANGELOG): 
+  - [typhonjs-npm-scripts-build-babel(0.7.0)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-build-babel/releases/tag/0.7.0)
+
 ## 0.6.0 (2017-02-25)
 - Updated the following sub-modules (click to see respective CHANGELOG): 
   - [typhonjs-npm-scripts-build-babel(0.6.0)](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-build-babel/releases/tag/0.5.0)
