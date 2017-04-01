@@ -25,6 +25,8 @@ directory is necessary to easily import the NPM modules linked by `typhonjs-npm-
 
 For the latest significant changes please see the [CHANGELOG](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-build-test/blob/master/CHANGELOG.md).
 
+Please be aware of a 0.7.0 breaking change as [babel-preset-latest](https://www.npmjs.com/package/babel-preset-latest) has been swapped out for [babel-preset-env](https://www.npmjs.com/package/babel-preset-env). 
+
 Please be aware of a 0.5.0 breaking change as [typhonjs-node-esdoc](https://www.npmjs.com/package/typhonjs-node-esdoc) has been removed, so ESDoc is no longer available. Please check out with TJSDoc (the spiritual successor to ESDoc). 
 
 Please be aware of a 0.2.0 breaking change in [typhonjs-npm-scripts-test-mocha](https://github.com/typhonjs-node-npm-scripts/typhonjs-npm-scripts-test-mocha/blob/master/CHANGELOG.md#020-2016-06-02)
@@ -35,11 +37,10 @@ To configure all scripts included in `typhonjs-npm-build-test` provide this entr
 
 ```
   "devDependencies": {
-    "typhonjs-npm-build-test": "^0.6.0"
+    "typhonjs-npm-build-test": "^0.7.0"
   },
   "scripts": {
     "build": "babel-node ./node_modules/typhonjs-npm-scripts-build-babel/scripts/build.js",
-    "esdoc": "esdoc -c .esdocrc",
     "eslint": "eslint .",
     "prepublish": "babel-node ./node_modules/typhonjs-npm-scripts-publish/scripts/prepublish.js",
     "test": "babel-node ./node_modules/typhonjs-npm-scripts-test-mocha/scripts/mocha.js",
